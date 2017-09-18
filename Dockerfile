@@ -1,6 +1,7 @@
-FROM joengenduvel/docker-development-tools
+FROM ubuntu
 
-RUN apk add --no-cache libsecret vscode
+RUN apt-get update /
+ && apt-get install vscode
 
 
 
