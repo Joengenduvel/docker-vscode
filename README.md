@@ -9,15 +9,11 @@ This image is based on: https://github.com/Joengenduvel/docker-x11-client
 # Running
 ## Linux
 ```
-docker run -d --rm -e "DISPLAY=$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix --volumes-from home -name intellij joengenduvel/docker-intellij
+docker run -d --rm -e "DISPLAY=$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix -name vscode joengenduvel/docker-vscode
 ```
 
 ## Windows
 For detailed instructions, see https://github.com/Joengenduvel/docker-x11-client
 ```
-docker run -d --rm --volumes-from home -name intellij joengenduvel/docker-intellij
-```
-After first time you will see an error, because the config folder of Intellij is still owned by root. Execute the nex command to solve this.
-```
-docker exec -it -u 0 intellij chown dev:developers /home/dev
+docker run -d --rm -name vscode joengenduvel/docker-vscode
 ```
