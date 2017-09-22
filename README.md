@@ -11,7 +11,6 @@ docker run -d --rm -e "DISPLAY=$DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix -name 
 ```
 
 ## Windows
-For detailed instructions, see https://github.com/Joengenduvel/docker-x11-client
 ```
 docker run -d --rm -name vscode joengenduvel/docker-vscode
 ```
