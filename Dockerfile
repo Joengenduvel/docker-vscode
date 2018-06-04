@@ -9,7 +9,7 @@ RUN groupadd $GROUP
 RUN useradd -m -G $GROUP $USER
 
 RUN apt-get update \
- && apt-get install -y curl apt-transport-https libgtk2.0-0 libxss1 libasound2 xauth x11-apps dbus git
+ && apt-get install -y curl apt-transport-https libgtk2.0-0 libxss1 libasound2 xauth x11-apps dbus git gpg
 
 RUN mkdir /var/run/dbus
 
